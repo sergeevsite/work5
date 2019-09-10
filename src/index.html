@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Work5 - Мои магазины</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row main">
+      <!-- Сайдбар -->
+      <div class="col-xl-3 col-lg-4 col-md-12 sidebar">
+        <div class="container">
+          <div class="row mt-4">
+            <span class="col sidebar-block">
+              <img src="./img/sidebar/logo.png" alt="Логотип" class="sidebar__logo">
+              <ul class="sidebar-list">
+                <li class="sidebar-item">
+                  <img src="./img/sidebar/home.png" alt="Главная" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">Главная</span>
+                </li>
+                <li class="sidebar-item sidebar-item_active">
+                  <img src="./img/sidebar/shopping-cart.png" alt="Мои магазины" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">Мои магазины</span>
+                </li>
+                <li class="sidebar-item">
+                  <img src="./img/sidebar/megaphone.png" alt="Промоматериалы" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">Промоматериалы</span>
+                </li>
+                <li class="sidebar-item">
+                  <img src="./img/sidebar/pie-chart.png" alt="Статистика" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">Статистика</span>
+                </li>
+                <li class="sidebar-item">
+                  <img src="./img/sidebar/wallet.png" alt="Баланс" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">Баланс</span>
+                </li>
+                <li class="sidebar-item">
+                  <img src="./img/sidebar/profile.png" alt="Персональные данные" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">Персональные данные</span>
+                </li>
+                <li class="sidebar-item">
+                  <img src="./img/sidebar/information.png" alt="FAQ" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">FAQ</span>
+                </li>
+                <li class="sidebar-item">
+                  <img src="./img/sidebar/multimedia.png" alt="Техподдержка" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">Техподдержка</span>
+                </li>
+                <li class="sidebar-item">
+                  <img src="./img/sidebar/logout.png" alt="Выход" class="sidebar-item__icon">
+                  <span class="sidebar-item__text">Выход</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <!-- Контент -->
+      <div class="col-xl-9 col-lg-8 col-md-12 content">
+        <div class="container-fluid pl-xl-5 pl-lg-5">
+          <!-- Шапка -->
+          <div class="row header mt-4">
+            <!-- Кнопка мобильного меню -->
+            <div id="menuMobile" class="col-md-1 col-sm-1 mb-4 header-menu">
+              <div class="header-menu__icon"></div>
+            </div>
+            <!-- Крошки -->
+            <div class="col-xl-8 col-lg-6 col-md-6 col-sm-6 mb-4 header-crumbs">
+              <a href="!#" class="content-crumbs__text">Главная</a>
+              <a href="!#" class="content-crumbs__text">Мои магазины</a>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-5 col-sm-6 mb-3 d-flex header-wrap ">
+              <!-- Сообщения -->
+              <div class="header-messege">
+                <img src="./img/header/envelope.png" alt="Почта" class="header-messege__icon">
+              </div>
+              <!-- Профиль -->
+              <div class="header-profile header__profile">
+                  <div class="header-profile__photo"> <img src="./img/header/profile-photo.jpg" alt="Фото профиля"></div>
+                <span class="header-profile__name">Максим Добжанский</span>
+              </div>
+            </div>
+          </div>
+          <!-- Секция "Создать магазин" -->
+          <div class="row store-btn mt-3">
+            <div class="col">
+              <button data-toggle="modal" data-target="#exampleModal" class="button btn btn-success store__button">Создать свой магазин</button>
+            </div>
+          </div>
+          <!-- Секция "Управление магазинами" -->
+          <div class="row management">
+            <div class="col">
+              <h1 class="management__title">Управление магазинами</h1>
+            </div>
+          </div>
+          <!-- Таблица "Управление магазинами" -->
+          <div class="row mt-3 mb-4">
+            <div class="col-xl-7 col-lg-12">
+              <div class="management-block">
+                <table class="table table-responsive">
+                  <!-- Шапка таблицы -->
+                  <thead class="table-header">
+                    <tr>
+                      <th scope="col">№</th>
+                      <th scope="col">Название</th>
+                      <th scope="col">Адрес</th>
+                      <th scope="col">Действие</th>
+                    </tr>
+                  </thead>
+                  <!-- Контент таблицы -->
+                  <tbody class="table-body">
+                    <!-- Строчка данных -->
+                    <tr>
+                      <td> 
+                        <input class="table-body__input" type="text"> 
+                        <span class="table-body__text">12345</span>
+                      </td>
+                      <td> 
+                        <input class="table-body__input" type="text"> 
+                        <span class="table-body__text">Дипломная работа</span>
+                      </td>
+                      <td> 
+                        <input class="table-body__input" type="text"> 
+                        <span class="table-body__text">http://www.work5.ru/services</span>
+                      </td>
+                      <td>
+                        <button data-item="1" id="editForm" class="button btn btn-success management__button">Редактировать</button>
+                      </td>
+                    </tr>
+                    <!-- Строчка данных -->
+                    <tr>
+                      <td> 
+                        <input class="table-body__input" type="text"> 
+                        <span class="table-body__text">12345</span>
+                      </td>
+                      <td> 
+                        <input class="table-body__input" type="text"> 
+                        <span class="table-body__text">Дипломная работа</span>
+                      </td>
+                      <td> 
+                        <input class="table-body__input" type="text"> 
+                        <span class="table-body__text">http://www.work5.ru/services</span>
+                      </td>
+                      <td>
+                        <button data-item="2" id="editForm" class="button btn btn-success management__button">Редактировать</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно создания магазина -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content store-create">
+          <div class="row mb-4">
+          <div class="col-xl-11 col-lg-11 col-10">
+            <h2 class="store-create__title">Создать магазин</h2>
+          </div>
+          <div class="col-xl-1 col-lg-1 col-2">
+          <button type="button" class=" store-create__close close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="store-form">
+          <div class="row mb-4">
+            <div class="col-xl-5 col-sm-5 col-12 store-list">
+              <label for="stock" class="store-form__label">Шаблон</label>
+              <select id="stock" class="store-form__select">
+                <option value="Стандартный">Стандартный</option>
+                <option value="Стандартный">Стандартный</option>
+                <option value="Стандартный">Стандартный</option>
+              </select>
+            </div>
+            <div class="col-xl-5 offset-xl-2 offset-sm-2 col-sm-5 col-12 mt-xl-0  mt-sm-0 mt-3  store-list">
+              <label for="color" class="store-form__label">Цветовая схема</label>
+              <select id="color" class="store-form__select">
+                <option value="Классическая">Классическая</option>
+                <option value="Классическая">Классическая</option>
+                <option value="Классическая">Классическая</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col store-domain">
+              <label for="domain" class="store-form__label">Домен</label>
+              <input id="domain" type="text" class="store-form__input" placeholder="Например: ivangrozniy">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-2 col-sm-2 col-12 mb-xl-0 mb-sm-0 mb-3 store-image">
+              <img src="./img/store/warning.png" alt="Информация" class="store-form__image">
+            </div>
+            <div class="col-xl-10 col-sm-10 col-12">
+              <p class="store-form__text">В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по <a href="#">ссылке</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col store-button">
+              <button class="button btn btn-success store-form__button store-form__cancel">Отмена</button>
+              <button type="submit" class="button btn btn-success store-form__button store-form__create">Создать</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/function.js"></script>
+</body>
+</html>
